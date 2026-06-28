@@ -25,6 +25,35 @@ window.addEventListener('scroll', () => {
     : 'rgba(237, 165, 27, 0.2)';
 }, { passive: true });
 
+// Countdown to 4pm Saturday 26 September 2026
+const TARGET = new Date('2026-09-26T16:00:00');
+const cdDays  = document.getElementById('cd-days');
+const cdHours = document.getElementById('cd-hours');
+const cdMins  = document.getElementById('cd-mins');
+const cdSecs  = document.getElementById('cd-secs');
+
+function pad(n) { return String(n).padStart(2, '0'); }
+
+function updateCountdown() {
+  const diff = TARGET - Date.now();
+  if (diff <= 0) {
+    document.getElementById('countdown').remove();
+    clearInterval(countdownInterval);
+    return;
+  }
+  const days  = Math.floor(diff / 86400000);
+  const hours = Math.floor((diff % 86400000) / 3600000);
+  const mins  = Math.floor((diff % 3600000)  / 60000);
+  const secs  = Math.floor((diff % 60000)    / 1000);
+  cdDays.textContent  = days;
+  cdHours.textContent = pad(hours);
+  cdMins.textContent  = pad(mins);
+  cdSecs.textContent  = pad(secs);
+}
+
+updateCountdown();
+const countdownInterval = setInterval(updateCountdown, 1000);
+
 // Active nav link on scroll
 const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
 const sections  = document.querySelectorAll('section[id], div[id="ciders"]');
