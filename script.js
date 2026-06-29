@@ -55,21 +55,26 @@ updateCountdown();
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 // Active nav link on scroll
-const navHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
-const sections  = document.querySelectorAll('section[id], div[id="ciders"]');
+const navHeight  = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
+const sections   = document.querySelectorAll('section[id], div[id="ciders"]');
 const navAnchors = links.querySelectorAll('a[href^="#"]');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const id = entry.target.id;
-    navAnchors.forEach(a => {
-      a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
-    });
-  });
-}, {
-  rootMargin: `-${navHeight}px 0px -60% 0px`,
-  threshold: 0,
-});
+function updateActiveNav() {
+  const trigger = window.scrollY + navHeight + 40;
+  let activeId = null;
 
-sections.forEach(s => observer.observe(s));
+  sections.forEach(s => {
+    if (s.offsetTop <= trigger) activeId = s.id;
+  });
+
+  // Only highlight if we've scrolled past the hero
+  const heroBottom = document.getElementById('top').offsetTop + document.getElementById('top').offsetHeight;
+  if (window.scrollY + navHeight < heroBottom - 80) activeId = null;
+
+  navAnchors.forEach(a => {
+    a.classList.toggle('is-active', activeId !== null && a.getAttribute('href') === `#${activeId}`);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
