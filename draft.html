@@ -10,7 +10,7 @@
   <title>Long Ashton Beer &amp; Cider Festival 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DTPY423RG1"></script>
@@ -32,15 +32,14 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks" role="list">
-
         <li><a href="#beers">Beers</a></li>
         <li><a href="#ciders">Ciders</a></li>
-        <li><a href="#bands">Music</a></li>
+        <li><a href="#bands">Live Music</a></li>
         <li><a href="#food">Food</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://lacc.info/events/31/details" class="nav__mobile-cta" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'navigation'})">Get Tickets</a>
+      <a href="https://lacc.info/events/31/details" class="nav__cta" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'navigation'})">Get Tickets</a>
     </div>
   </nav>
 
@@ -49,171 +48,173 @@
   ============================================================ -->
   <section class="hero" id="top">
     <div class="hero__inner">
-      <img src="assets/tall-pint-cropped.png" alt="Long Ashton Beer &amp; Cider Festival" class="hero__logo">
-      <div class="hero__content">
-        <p class="hero__venue">Long Ashton <span class="nowrap">Village Hall</span></p>
-        <p class="hero__date">4pm–11pm, Saturday 26 September 2026</p>
-        <div class="hero__tickets">
-          <a href="https://lacc.info/events/31/details" class="btn btn--primary" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'hero'})">Get Tickets &nbsp;·&nbsp; £15</a>
-          <p class="hero__scarcity">
-            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Limited online tickets. Don't miss out.
-          </p>
-          <p class="hero__small">Includes your first drink, commemorative glass &amp; programme. Also available from <strong>Long Ashton Post Office</strong> from 1 September (cash only).</p>
+      <img src="assets/village-crest.svg" alt="" class="hero__crest" aria-hidden="true">
+      <div class="hero__body">
+        <h1 class="hero__title">Long Ashton<br>Beer&nbsp;<span class="hero__amp">&amp;</span>&nbsp;Cider<br>Festival</h1>
+        <p class="hero__date">4pm–11pm &bull; Sat 26 Sep 2026</p>
+        <div class="hero__stats" aria-label="Festival highlights">
+          <a href="#beers" class="hero__stat">
+            <span class="hero__stat-value">9</span>
+            <span class="hero__stat-label">BEERS</span>
+          </a>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <a href="#ciders" class="hero__stat">
+            <span class="hero__stat-value">5</span>
+            <span class="hero__stat-label">CIDERS</span>
+          </a>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <a href="#bands" class="hero__stat">
+            <span class="hero__stat-value">4</span>
+            <span class="hero__stat-label">BANDS</span>
+          </a>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <a href="#food" class="hero__stat">
+            <img src="assets/food-icon.png" class="hero__stat-icon" alt="" aria-hidden="true">
+            <span class="hero__stat-label">HOT FOOD</span>
+          </a>
         </div>
+        <div class="hero__cta-group">
+          <a href="https://lacc.info/events/31/details" class="btn btn--primary" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'hero'})">Get Tickets &middot; &pound;15</a>
+          <p class="hero__scarcity">Limited online tickets &ndash; don't miss out</p>
+        </div>
+        <p class="hero__small">Includes your first drink, commemorative glass &amp; programme. Also available from <strong>Long Ashton Post Office</strong> from 1 September (cash only).</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       BEERS
+       BEERS & CIDERS (one visual block, two nav targets)
   ============================================================ -->
   <section class="section section--light" id="beers">
     <div class="container">
-      <header class="section__header">
-        <h2 class="section__title">The Beers</h2>
-        <p class="section__subtitle">A hand-picked selection of real ales from some of the South West's finest breweries</p>
-      </header>
-      <div class="producer-grid producer-grid--five">
-        <a class="producer-card" href="https://www.bristolbeerfactory.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/bristol-beer-factory.png" alt="Bristol Beer Factory"></div>
-          <h3 class="producer-card__name">Bristol Beer Factory</h3>
-        </a>
-        <a class="producer-card" href="https://www.hopunionbrewery.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/hop-union.png" alt="Hop Union Brewery"></div>
-          <h3 class="producer-card__name">Hop Union Brewery</h3>
-        </a>
-        <a class="producer-card" href="https://www.cheddarales.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/cheddar-ales.png" alt="Cheddar Ales"></div>
-          <h3 class="producer-card__name">Cheddar Ales</h3>
-        </a>
-        <a class="producer-card" href="https://www.wookeyale.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/wookey-holes.png" alt="Wookey Brewing Co"></div>
-          <h3 class="producer-card__name">Wookey Brewing Co</h3>
-        </a>
-        <a class="producer-card" href="https://www.facebook.com/BasonBridgeBrewery/?locale=en_GB" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/bason-bridge.png" alt="Bason Bridge Brewing Co"></div>
-          <h3 class="producer-card__name">Bason Bridge Brewing Co</h3>
-        </a>
-        <a class="producer-card" href="https://badgworthbrewhouse.com" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/badgeworth.png" alt="Badgworth Brewhouse"></div>
-          <h3 class="producer-card__name">Badgworth Brewhouse</h3>
-        </a>
-        <a class="producer-card" href="https://www.uleybrewery.com" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/uley-brewery.png" alt="Uley Brewery"></div>
-          <h3 class="producer-card__name">Uley Brewery</h3>
-        </a>
-        <a class="producer-card" href="https://www.twistedoakbrewery.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/twisted-oak.png" alt="Twisted Oak Brewery"></div>
-          <h3 class="producer-card__name">Twisted Oak Brewery</h3>
-        </a>
-        <a class="producer-card" href="https://www.butcombe.com" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/butcombe.png" alt="Butcombe Brewing Co"></div>
-          <h3 class="producer-card__name">Butcombe Brewing Co</h3>
-        </a>
+      <h2 class="section__display">Brewed and Pressed in the South west</h2>
+
+      <div class="producer-group">
+        <div class="producer-group__header">
+          <h3 class="section__heading">The Beers</h3>
+          <p class="section__subtext">A hand-picked selection of real ales from some of the South West's finest breweries</p>
+        </div>
+        <div class="beverage-grid">
+          <a class="beverage-card" href="https://badgworthbrewhouse.com" target="_blank" rel="noopener">
+            <img src="assets/logos/badgeworth.png" alt="Badgworth Brewhouse">
+          </a>
+          <a class="beverage-card" href="https://www.facebook.com/BasonBridgeBrewery/?locale=en_GB" target="_blank" rel="noopener">
+            <img src="assets/logos/bason-bridge.png" alt="Bason Bridge Brewing Co">
+          </a>
+          <a class="beverage-card" href="https://www.bristolbeerfactory.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/bristol-beer-factory.png" alt="Bristol Beer Factory">
+          </a>
+          <a class="beverage-card" href="https://www.butcombe.com" target="_blank" rel="noopener">
+            <img src="assets/logos/butcombe.png" alt="Butcombe Brewing Co">
+          </a>
+          <a class="beverage-card" href="https://www.cheddarales.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/cheddar-ales.png" alt="Cheddar Ales">
+          </a>
+          <a class="beverage-card" href="https://www.hopunionbrewery.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/hop-union.png" alt="Hop Union Brewery">
+          </a>
+          <a class="beverage-card" href="https://www.twistedoakbrewery.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/twisted-oak.png" alt="Twisted Oak Brewery">
+          </a>
+          <a class="beverage-card" href="https://www.uleybrewery.com" target="_blank" rel="noopener">
+            <img src="assets/logos/uley-brewery.png" alt="Uley Brewery">
+          </a>
+          <a class="beverage-card" href="https://www.wookeyale.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/wookey-holes.png" alt="Wookey Brewing Co">
+          </a>
+        </div>
       </div>
-      <p class="section__note">Breweries shown attended last year — many are expected to return in 2026. Full selection to be confirmed.</p>
+
+      <div class="producer-group" id="ciders">
+        <div class="producer-group__header">
+          <h3 class="section__heading">The Ciders</h3>
+          <p class="section__subtext">From orchard to glass: a carefully chosen range of West Country ciders</p>
+        </div>
+        <div class="beverage-grid">
+          <a class="beverage-card" href="https://www.branchcider.com" target="_blank" rel="noopener">
+            <img src="assets/logos/branch.png" alt="Branch Cider">
+          </a>
+          <a class="beverage-card" href="https://www.honeyscider.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/honeys.png" alt="Honey's Cider">
+          </a>
+          <a class="beverage-card" href="https://www.nailseacider.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/nailsea.png" alt="Nailsea Cider">
+          </a>
+          <a class="beverage-card" href="https://www.severncider.com" target="_blank" rel="noopener">
+            <img src="assets/logos/severn.png" alt="Severn Cider">
+          </a>
+          <a class="beverage-card" href="https://www.worleyscider.co.uk" target="_blank" rel="noopener">
+            <img src="assets/logos/worleys.png" alt="Worley's Cider">
+          </a>
+        </div>
+      </div>
+
+      <p class="section__note">Breweries and cider makers shown here attended last year — many are expected to return in 2026. Full selection to be confirmed.</p>
     </div>
   </section>
 
   <!-- ============================================================
-       CIDERS
-  ============================================================ -->
-  <section class="section section--cider" id="ciders">
-    <div class="container">
-      <header class="section__header">
-        <h2 class="section__title">The Ciders</h2>
-        <p class="section__subtitle">From orchard to glass: a carefully chosen range of West Country ciders</p>
-      </header>
-      <div class="producer-grid producer-grid--five">
-        <a class="producer-card producer-card--on-amber" href="https://www.honeyscider.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/honeys.png" alt="Honey's Cider"></div>
-          <h3 class="producer-card__name">Honey's Cider</h3>
-        </a>
-        <a class="producer-card producer-card--on-amber" href="https://www.branchcider.com" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/branch.png" alt="Branch Cider"></div>
-          <h3 class="producer-card__name">Branch Cider</h3>
-        </a>
-        <a class="producer-card producer-card--on-amber" href="https://www.severncider.com" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/severn.png" alt="Severn Cider"></div>
-          <h3 class="producer-card__name">Severn Cider</h3>
-        </a>
-        <a class="producer-card producer-card--on-amber" href="https://www.worleyscider.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/worleys.png" alt="Worley's Cider"></div>
-          <h3 class="producer-card__name">Worley's Cider</h3>
-        </a>
-        <a class="producer-card producer-card--on-amber" href="https://www.nailseacider.co.uk" target="_blank" rel="noopener">
-          <div class="producer-card__logo"><img src="assets/logos/nailsea.png" alt="Nailsea Cider"></div>
-          <h3 class="producer-card__name">Nailsea Cider</h3>
-        </a>
-      </div>
-      <p class="section__note section__note--on-amber">Cider makers shown attended last year — many are expected to return in 2026. Full selection to be confirmed.</p>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       BANDS
+       LIVE MUSIC
   ============================================================ -->
   <section class="section section--dark" id="bands">
     <div class="container">
-      <header class="section__header">
-        <h2 class="section__title">Live Music</h2>
-        <p class="section__subtitle">Four acts bringing soul, funk, blues, Americana and more to the Village Hall stage</p>
-      </header>
+      <h2 class="section__display">Live Music</h2>
+      <p class="section__subtitle">Four acts bringing soul, funk, blues, Americana and more to the Village Hall stage</p>
 
-      <div class="bands">
-
-        <!-- Headline: Total Clusterfunk -->
-        <article class="band-card band-card--headline">
-          <div class="band-card__media">
-            <img src="assets/clusterphotos/IMG_3338.jpg" alt="Total Clusterfunk performing live" loading="eager">
-            <div class="band-card__media-overlay"></div>
+      <!-- Headline: Total Clusterfunk -->
+      <article class="artist artist--headline">
+        <div class="artist__image">
+          <img src="assets/clusterphotos/IMG_3338.jpg" alt="Total Clusterfunk performing live" loading="eager">
+        </div>
+        <div class="artist__content">
+          <div class="artist__header">
+            <span class="artist__tag">Headline Act</span>
+            <h3 class="artist__name">Total Clusterfunk</h3>
           </div>
-          <div class="band-card__content">
-            <span class="band-tag">Headline Act</span>
-            <h3 class="band-card__name">Total Clusterfunk</h3>
-            <p class="band-card__bio">A Bristol soul-funk 8-piece with a stellar show. Comprising former members of Roni Size and Reprazent, The Federation and Massive Attack, they bring pure energy to the stage — mixing brass-heavy funk classics, smooth soul gems and tight original tunes that are sure to get you moving.</p>
-            <blockquote class="band-card__quote">"Blast your blues away with one of the best brass sections you'll hear all year!"<cite>Steve Henwood — Glastonbury Festivals &amp; The Bell Inn, Bath</cite></blockquote>
-            <a href="https://www.facebook.com/TherealClusterfunk/" class="btn btn--outline" target="_blank" rel="noopener">Find them on Facebook</a>
+          <p class="artist__bio">A Bristol soul-funk 8-piece with a stellar show. Comprising former members of Roni Size and Reprazent, The Federation and Massive Attack, they bring pure energy to the stage — mixing brass-heavy funk classics, smooth soul gems and tight original tunes that are sure to get you moving.</p>
+          <blockquote class="artist__quote">
+            <p>"Blast your blues away with one of the best brass sections you'll hear all year!"</p>
+            <cite>Steve Henwood — Glastonbury Festivals &amp; The Bell Inn, Bath</cite>
+          </blockquote>
+          <a href="https://www.facebook.com/TherealClusterfunk/" class="btn btn--outline" target="_blank" rel="noopener">Find them on Facebook</a>
+        </div>
+      </article>
+
+      <!-- Supporting acts -->
+      <div class="artists-grid">
+
+        <article class="artist">
+          <div class="artist__image">
+            <img src="assets/steve-payne.jpg" alt="Steve Payne performing live" loading="lazy">
+          </div>
+          <div class="artist__content">
+            <h3 class="artist__name">SP3 Blues Trio</h3>
+            <p class="artist__bio">Legendary Bristol bluesman Steve Payne and guitarist Lyndon Webb, together with Yardbirds and Nine Below Zero harp man Billyboy Miskimmin — world class blues and boogie from three of the UK's finest exponents.</p>
+            <a href="https://spthree.co.uk" class="btn btn--outline" target="_blank" rel="noopener">Visit their website</a>
           </div>
         </article>
 
-        <!-- Supporting acts grid -->
-        <div class="bands__supporting">
+        <article class="artist">
+          <div class="artist__image">
+            <img src="assets/the-shrinks.jpg" alt="The Shrinks" loading="lazy">
+          </div>
+          <div class="artist__content">
+            <h3 class="artist__name">The Shrinks</h3>
+            <p class="artist__bio">England's premier exponents of 'Avonicana' — where the mighty Mississippi meets the muddy Avon. More Cotham than Country, The Shrinks offer an off-kilter cocktail of original songs and Americana covers played with vim.</p>
+            <a href="https://x.com/Moredamnedlies" class="btn btn--outline" target="_blank" rel="noopener">Follow on X</a>
+          </div>
+        </article>
 
-          <article class="band-card">
-            <div class="band-card__media">
-              <img src="assets/steve-payne.jpg" alt="Steve Payne performing live" loading="lazy">
-            </div>
-            <div class="band-card__content">
-              <h3 class="band-card__name">SP3 Blues Trio</h3>
-              <p class="band-card__bio">Legendary Bristol bluesman Steve Payne and guitarist Lyndon Webb, together with Yardbirds and Nine Below Zero harp man Billyboy Miskimmin — world class blues and boogie from three of the UK's finest exponents.</p>
-              <a href="https://spthree.co.uk" class="btn btn--outline btn--sm" target="_blank" rel="noopener">Visit their website</a>
-            </div>
-          </article>
+        <article class="artist">
+          <div class="artist__image">
+            <img src="assets/hester-miller.jpeg" alt="Hester Miller performing with her ukulele" loading="lazy">
+          </div>
+          <div class="artist__content">
+            <h3 class="artist__name">Hester Miller</h3>
+            <p class="artist__bio">A regular at open mic nights around Bristol, the Malago-go Music Club and Victoria Park Festival. Hester brings a fabulous voice, wonderful ukulele playing and a warmth that fills any room.</p>
+          </div>
+        </article>
 
-          <article class="band-card">
-            <div class="band-card__media">
-              <img src="assets/the-shrinks.jpg" alt="The Shrinks" loading="lazy">
-            </div>
-            <div class="band-card__content">
-              <h3 class="band-card__name">The Shrinks</h3>
-              <p class="band-card__bio">England's premier exponents of 'Avonicana' — where the mighty Mississippi meets the muddy Avon. More Cotham than Country, The Shrinks offer an off-kilter cocktail of original songs and Americana covers played with vim.</p>
-              <a href="https://x.com/Moredamnedlies" class="btn btn--outline btn--sm" target="_blank" rel="noopener">Follow on X</a>
-            </div>
-          </article>
-
-          <article class="band-card">
-            <div class="band-card__media">
-              <img src="assets/hester-miller.jpeg" alt="Hester Miller performing with her ukulele" loading="lazy">
-            </div>
-            <div class="band-card__content">
-              <h3 class="band-card__name">Hester Miller</h3>
-              <p class="band-card__bio">A regular at open mic nights around Bristol, the Malago-go Music Club and Victoria Park Festival. Hester brings a fabulous voice, wonderful ukulele playing and a warmth that fills any room.</p>
-            </div>
-          </article>
-
-        </div>
       </div>
     </div>
   </section>
@@ -223,15 +224,23 @@
   ============================================================ -->
   <section class="section section--light" id="food">
     <div class="container container--narrow">
-      <header class="section__header">
-        <h2 class="section__title">Food</h2>
-      </header>
-      <div class="food-card">
-        <a href="https://themarketkitchen.co.uk/" target="_blank" rel="noopener" class="food-card__logo-link">
-          <img src="assets/market-kitchen.png" alt="The Market Kitchen" class="food-card__logo">
-        </a>
-        <div class="food-card__content">
-          <p class="food-card__desc">Excellent home-cooked food at sensible prices, freshly prepared by a local team. The perfect companion to a pint (or three). Menu to be announced.</p>
+      <h2 class="section__display">Food</h2>
+      <div class="food-artist">
+        <div class="food-artist__images">
+          <a href="https://www.themarketkitchen.co.uk" class="beverage-card" target="_blank" rel="noopener" aria-label="Visit The Market Kitchen website">
+            <img src="assets/market_kitchen.png" alt="The Market Kitchen">
+          </a>
+          <div class="beverage-card">
+            <img src="assets/food-image.png" alt="Hot food from the Market Kitchen">
+          </div>
+        </div>
+        <div class="food-artist__content">
+          <h3 class="artist__name food-artist__name">The Market Kitchen</h3>
+          <p class="artist__bio">Our regular caterers are back by popular demand. Excellent home-cooked food at sensible prices, freshly prepared by a local team. The perfect companion to a pint (or three). Menu to be announced.</p>
+          <blockquote class="artist__quote">
+            <p>"That was the best hog roast I've ever had"</p>
+            <cite>Malcolm &mdash; Roadie for the band</cite>
+          </blockquote>
         </div>
       </div>
     </div>
@@ -240,15 +249,13 @@
   <!-- ============================================================
        COMMUNITY
   ============================================================ -->
-  <section class="section section--amber" id="community">
+  <section class="section section--dark" id="community">
     <div class="container container--narrow">
-      <header class="section__header">
-        <h2 class="section__title">Supporting Our Community</h2>
-      </header>
-      <div class="community-content">
+      <h2 class="section__display">Supporting our community</h2>
+      <div class="community-body">
         <p>The Long Ashton Beer &amp; Cider Festival has been running since 2013, and all proceeds go towards the <strong>Long Ashton Community Association</strong>, the charitable body that maintains and develops the Community Centre and the wide range of services it provides to local residents.</p>
         <p>When you buy a ticket, you're not just signing up for a great evening, you're helping keep the heart of Long Ashton beating. Thank you.</p>
-        <a href="https://lacc.info" class="btn btn--dark" target="_blank" rel="noopener">Learn about the Community Centre</a>
+        <a href="https://lacc.info" class="btn btn--outline" target="_blank" rel="noopener">Learn about the Community Centre</a>
       </div>
     </div>
   </section>
@@ -256,82 +263,70 @@
   <!-- ============================================================
        CONTACT
   ============================================================ -->
-  <section class="section section--dark" id="contact">
+  <section class="section section--amber" id="contact">
     <div class="container container--narrow">
-      <header class="section__header">
-        <h2 class="section__title">Get in Touch</h2>
-        <p class="section__subtitle">Got a question about the festival? We'd love to hear from you.</p>
-      </header>
-      <div class="contact-content">
-        <!-- TODO: Replace with actual contact email -->
-        <a href="mailto:labeerfest@outlook.com" class="contact-email">labeerfest@outlook.com</a>
-        <p class="social-cta">Follow us for beer and cider updates, band announcements and more</p>
+      <h2 class="section__display section__display--on-amber">Get in Touch</h2>
+      <div class="contact-body">
+        <p class="contact-cta">Got a question about the festival? We'd love to hear from you.</p>
+        <!-- TODO: Confirm whether contact@labf.org.uk or labeerfest@outlook.com is correct -->
+        <a href="mailto:labeerfest@outlook.com" class="btn btn--contact-email">labeerfest@outlook.com</a>
+        <p class="contact-cta">Follow us for beer and cider updates, band announcements and more</p>
         <div class="social-links">
           <!-- TODO: Update Facebook URL when vanity URL is changed -->
-          <a href="https://www.facebook.com/LABandCF" class="social-link social-link--facebook" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Follow on Facebook
-          </a>
+          <a href="https://www.facebook.com/LABandCF" class="btn btn--social" target="_blank" rel="noopener">Facebook</a>
           <!-- TODO: Replace # with actual Instagram URL -->
-          <a href="#" class="social-link social-link--instagram" aria-label="Follow us on Instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            Follow on Instagram
-          </a>
+          <a href="#" class="btn btn--social">Instagram</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================================
-       FOOTER / SPONSORS
+       SPONSORS
   ============================================================ -->
-  <footer class="footer" id="sponsors">
+  <section class="section section--light" id="sponsors">
     <div class="container">
-      <h2 class="footer__sponsors-title">Our Sponsors</h2>
-      <p class="footer__sponsors-subtitle">With thanks to the local businesses who make this festival possible</p>
+      <h2 class="section__display section__display--dark">Our Sponsors</h2>
+      <p class="section__subtitle section__subtitle--dark">With thanks to the local businesses who make this festival possible</p>
       <div class="sponsors-flow" role="list">
-        <a href="https://holotronica.com" target="_blank" rel="noopener" role="listitem">Holotronica Ltd.</a>
         <a href="https://alexandermay.co.uk" target="_blank" rel="noopener" role="listitem">Alexander May</a>
-        <a href="https://whcole.co.uk" target="_blank" rel="noopener" role="listitem">W H Cole &amp; Son</a>
-        <span role="listitem">The Miners' Rest</span>
-        <a href="https://thebirdinla.co.uk" target="_blank" rel="noopener" role="listitem">The Bird in Hand</a>
-        <a href="https://keedsfarmflowers.co.uk" target="_blank" rel="noopener" role="listitem">Keeds Farm Flowers</a>
-        <a href="https://littletipple.co.uk" target="_blank" rel="noopener" role="listitem">The Little Tipple</a>
-        <a href="https://theoldlibraryinla.co.uk" target="_blank" rel="noopener" role="listitem">The Old Library</a>
-        <a href="https://longashtonpostoffice.co.uk" target="_blank" rel="noopener" role="listitem">Long Ashton Village Shop &amp; PO</a>
-        <a href="https://longashtonbarbering.co.uk" target="_blank" rel="noopener" role="listitem">Long Ashton Barbering Co.</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
         <a href="https://bristolbikesmiths.com" target="_blank" rel="noopener" role="listitem">Bikesmiths Long Ashton</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://holotronica.com" target="_blank" rel="noopener" role="listitem">Holotronica Ltd.</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
         <a href="https://investsouthwest.co.uk" target="_blank" rel="noopener" role="listitem">Invest SouthWest</a>
-        <a href="https://theangelinn-longashton.co.uk" target="_blank" rel="noopener" role="listitem">The Angel Inn</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://keedsfarmflowers.co.uk" target="_blank" rel="noopener" role="listitem">Keeds Farm Flowers</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
         <a href="https://kingsr.com" target="_blank" rel="noopener" role="listitem">King Sound Reinforcement</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://longashtonbarbering.co.uk" target="_blank" rel="noopener" role="listitem">Long Ashton Barbering Co.</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://longashtonpostoffice.co.uk" target="_blank" rel="noopener" role="listitem">Long Ashton Village Shop &amp; PO</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://theangelinn-longashton.co.uk" target="_blank" rel="noopener" role="listitem">The Angel Inn</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://thebirdinla.co.uk" target="_blank" rel="noopener" role="listitem">The Bird in Hand</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://littletipple.co.uk" target="_blank" rel="noopener" role="listitem">The Little Tipple</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <span role="listitem">The Miners' Rest</span>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://theoldlibraryinla.co.uk" target="_blank" rel="noopener" role="listitem">The Old Library</a>
+        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
+        <a href="https://whcole.co.uk" target="_blank" rel="noopener" role="listitem">W H Cole &amp; Son</a>
       </div>
-      <div class="countdown" id="countdown" aria-live="polite">
-        <p class="countdown__heading">The bar opens in</p>
-        <div class="countdown__unit">
-          <span class="countdown__value" id="cd-days">—</span>
-          <span class="countdown__label">days</span>
-        </div>
-        <div class="countdown__sep" aria-hidden="true">·</div>
-        <div class="countdown__unit">
-          <span class="countdown__value" id="cd-hours">—</span>
-          <span class="countdown__label">hours</span>
-        </div>
-        <div class="countdown__sep" aria-hidden="true">·</div>
-        <div class="countdown__unit">
-          <span class="countdown__value" id="cd-mins">—</span>
-          <span class="countdown__label">minutes</span>
-        </div>
-        <div class="countdown__sep" aria-hidden="true">·</div>
-        <div class="countdown__unit">
-          <span class="countdown__value" id="cd-secs">—</span>
-          <span class="countdown__label">seconds</span>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <p>Long Ashton Beer &amp; Cider Festival 2026. All proceeds support the <a href="https://lacc.info" target="_blank" rel="noopener">Long Ashton Community Association</a></p>
-      </div>
+      <p class="sponsors-credit">Long Ashton Beer &amp; Cider Festival 2026. All proceeds support the <a href="https://lacc.info" target="_blank" rel="noopener">Long Ashton Community Association</a></p>
     </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <img src="assets/village-footer.svg" alt="" class="site-footer__crest" aria-hidden="true">
+    <div class="site-footer__bar"></div>
   </footer>
 
   <script src="script.js"></script>
