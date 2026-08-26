@@ -334,11 +334,11 @@ ul { list-style: none; }
 ============================================================ */
 
 /* Default: show online CTA, hide post office callout */
-.hero__cta-soldout { display: none; }
+.hero .hero__cta-soldout { display: none; }
 
 /* Sold out: hide online CTA, show post office callout */
 .is-sold-out .hero__cta-online { display: none; }
-.is-sold-out .hero__cta-soldout { display: flex; }
+.is-sold-out .hero .hero__cta-soldout { display: flex; }
 .is-sold-out .nav__cta { display: none; }
 
 /* Post office callout */
