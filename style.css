@@ -328,6 +328,55 @@ ul { list-style: none; }
 
 .hero__small strong { font-weight: 600; color: var(--on-black); }
 
+/* ============================================================
+   SOLD-OUT TOGGLE
+   Add class="is-sold-out" to <body> to switch to post office mode
+============================================================ */
+
+/* Default: show online CTA, hide post office callout */
+.hero__cta-soldout { display: none; }
+
+/* Sold out: hide online CTA, show post office callout */
+.is-sold-out .hero__cta-online { display: none; }
+.is-sold-out .hero__cta-soldout { display: flex; }
+.is-sold-out .nav__cta { display: none; }
+
+/* Post office callout */
+.hero__postoffice-callout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid rgba(236, 164, 49, 0.85);
+  border-radius: 0.75rem;
+  padding: 1.25rem 2rem;
+  text-align: center;
+}
+
+.hero__postoffice-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--amber);
+}
+
+.hero__postoffice-where {
+  font-size: 1rem;
+  color: var(--on-black);
+  line-height: 1.4;
+}
+
+.hero__postoffice-where strong {
+  font-weight: 600;
+}
+
+.hero__postoffice-when {
+  font-size: 0.75rem;
+  color: var(--on-black-muted);
+  letter-spacing: 0.01em;
+}
+
 @media (min-width: 480px) {
   .hero__crest { width: 260px; margin-bottom: -115px; }
   .hero__stat-value { font-size: 2.2rem; }

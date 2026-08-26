@@ -24,6 +24,7 @@
   </script>
 </head>
 <body>
+<!-- TICKET STATE: to switch to sold-out mode, change the line above to: <body class="is-sold-out"> -->
 
   <!-- ============================================================
        NAV
@@ -76,8 +77,15 @@
           </a>
         </div>
         <div class="hero__cta-group">
-          <a href="https://lacc.info/events/31/details" class="btn btn--primary" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'hero'})">Get Tickets &middot; &pound;15</a>
-          <p class="hero__scarcity">Limited online tickets &ndash; don't miss out</p>
+          <!-- Shown when online tickets available -->
+          <a href="https://lacc.info/events/31/details" class="btn btn--primary hero__cta-online" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'hero'})">Get Tickets &middot; &pound;15</a>
+          <p class="hero__scarcity hero__cta-online">Limited online tickets &ndash; don't miss out</p>
+          <!-- Shown when online tickets sold out -->
+          <div class="hero__postoffice-callout hero__cta-soldout">
+            <p class="hero__postoffice-heading">Tickets &middot; &pound;15 &middot; Cash only</p>
+            <p class="hero__postoffice-where">Available from <strong>Long Ashton Post Office</strong></p>
+            <p class="hero__postoffice-when">From 1 September &bull; While stocks last</p>
+          </div>
         </div>
         <p class="hero__small">Includes your first drink, commemorative glass &amp; programme. Also available from <strong>Long Ashton Post Office</strong> from 1 September (cash only).</p>
       </div>
