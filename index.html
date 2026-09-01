@@ -23,7 +23,7 @@
     gtag('config', 'G-SJZX6BD2B6');
   </script>
 </head>
-<body>
+<body class="is-sold-out">
 <!-- TICKET STATE: to switch to sold-out mode, change the line above to: <body class="is-sold-out"> -->
 <!-- TICKET STATE: to switch back to online tickets available, change the line above to: <body> -->
 
@@ -85,7 +85,8 @@
           <div class="hero__postoffice-callout hero__cta-soldout">
             <p class="hero__postoffice-heading">Tickets &middot; &pound;15 &middot; Cash only</p>
             <p class="hero__postoffice-where">Available from <strong>Long Ashton Post Office</strong></p>
-            <p class="hero__postoffice-when">From 1 September &bull; While stocks last</p>
+            <!--p class="hero__postoffice-when">From 1 September &bull; While stocks last</p-->
+            <p class="hero__postoffice-when">While stocks last</p>
           </div>
         </div>
         <p class="hero__small hero__cta-online">Includes your first drink, commemorative glass &amp; programme. Also available from <strong>Long Ashton Post Office</strong> from 1 September (cash only).</p>
@@ -106,35 +107,7 @@
           <h3 class="section__heading">The Beers</h3>
           <p class="section__subtext">Nine real ales from some of the South West's finest breweries, confirmed for 2026</p>
         </div>
-        <div class="beverage-grid">
-          <a class="beverage-card" href="https://www.bristolbeerfactory.co.uk" target="_blank" rel="noopener">
-            <img src="assets/logos/bristol-beer-factory.png" alt="Bristol Beer Factory">
-          </a>
-          <a class="beverage-card" href="https://www.butcombe.com" target="_blank" rel="noopener">
-            <img src="assets/logos/butcombe.png" alt="Butcombe Brewing Co">
-          </a>
-          <a class="beverage-card" href="https://www.cheddarales.co.uk" target="_blank" rel="noopener">
-            <img src="assets/logos/cheddar-ales.png" alt="Cheddar Ales">
-          </a>
-          <a class="beverage-card" href="https://whitehartinncross.co.uk/" target="_blank" rel="noopener">
-            <img src="assets/logos/cross.png" alt="Cross Brewing Co">
-          </a>
-          <a class="beverage-card" href="https://goodchemistrybrewing.co.uk/" target="_blank" rel="noopener">
-            <img src="assets/logos/good-chemistry.png" alt="Good Chemistry Brewing">
-          </a>
-          <a class="beverage-card" href="https://www.hopunionbrewery.co.uk" target="_blank" rel="noopener">
-            <img src="assets/logos/hop-union.png" alt="Hop Union Brewery">
-          </a>
-          <a class="beverage-card" href="https://littlemarthabrewing.co.uk/" target="_blank" rel="noopener">
-            <img src="assets/logos/little-martha.png" alt="Little Martha Brewing Co">
-          </a>
-          <a class="beverage-card" href="https://tangentbrewing.co.uk/" target="_blank" rel="noopener">
-            <img src="assets/logos/tangent.png" alt="Tangent Brewing">
-          </a>
-          <a class="beverage-card" href="https://www.twistedoakbrewery.co.uk" target="_blank" rel="noopener">
-            <img src="assets/logos/twisted-oak.png" alt="Twisted Oak Brewery">
-          </a>
-        </div>
+        <div class="d7-grid" id="d7-beers"></div>
       </div>
 
       <div class="producer-group" id="ciders">
@@ -142,28 +115,104 @@
           <h3 class="section__heading">The Ciders</h3>
           <p class="section__subtext">From orchard to glass: five West Country ciders confirmed for 2026</p>
         </div>
-        <div class="beverage-grid">
-          <a class="beverage-card" href="https://www.butcombe.com" target="_blank" rel="noopener">
-            <img src="assets/logos/butcombe.png" alt="Butcombe Brewing Co">
-          </a>
-          <a class="beverage-card" href="https://www.theciderbox.com/" target="_blank" rel="noopener">
-            <img src="assets/logos/hecks-x-cider-box.png" alt="Heck's Cider, donated by The Cider Box">
-          </a>
-          <a class="beverage-card" href="https://www.honeyscider.co.uk" target="_blank" rel="noopener">
-            <img src="assets/logos/honeys.png" alt="Honey's Cider">
-          </a>
-          <a class="beverage-card" href="https://www.ifordcider.com/" target="_blank" rel="noopener">
-            <img src="assets/logos/iford.png" alt="Iford Cider">
-          </a>
-          <a class="beverage-card" href="https://tippettscider.com/" target="_blank" rel="noopener">
-            <img src="assets/logos/tippetts.png" alt="Tippetts Cider">
-          </a>
-        </div>
+        <div class="d7-grid" id="d7-ciders"></div>
       </div>
-
-      <p class="section__note">Breweries and cider makers confirmed for 2026. Individual beer and cider selections to be announced.</p>
     </div>
   </section>
+
+  <!-- Beers & Ciders card JS -->
+  <script>
+    (function () {
+      const CIDERS = [
+        {
+          name: 'Stoney Bonk',
+          style: 'Flavoured',
+          brewery: "Honey's Cider",
+          abv: '4.0% ABV',
+          logo: 'assets/logos/honeys.png',
+          alt: "Honey's Cider",
+          url: 'https://www.honeyscider.co.uk',
+          location: 'Bath',
+          notes: "A fantastic blend of Honey's Midford Cider and refreshing ginger beer. Light, lively and unlike anything else on the bar."
+        },
+        {
+          name: 'Apples and Pears',
+          style: 'Medium Dry',
+          brewery: 'Tippetts Cider',
+          abv: '4.5% ABV',
+          logo: 'assets/logos/tippetts.png',
+          alt: 'Tippetts Cider',
+          url: 'https://tippettscider.com/',
+          location: 'Bristol',
+          notes: 'Made with traditional cider apples from local orchards and slowly fermented with wild yeasts. Crisp and refreshing with notes of honey, stone fruit and delicate pear-drop aromas.'
+        },
+        {
+          name: 'Ashton Press',
+          style: 'Dry',
+          brewery: 'Butcombe Brewing Co',
+          abv: '4.8% ABV',
+          logo: 'assets/logos/butcombe.png',
+          alt: 'Butcombe',
+          url: 'https://www.butcombe.com',
+          location: 'Somerset',
+          notes: 'A still, cloudy cider keeping the Long Ashton name alive. Crisp and gently tart with a soft, lingering dryness and a fresh, bright edge.'
+        },
+        {
+          name: 'Somerset Sahara',
+          style: 'Dry',
+          brewery: 'Iford Cider',
+          abv: '5.0% ABV',
+          logo: 'assets/logos/iford.png',
+          alt: 'Iford Cider',
+          url: 'https://www.ifordcider.com/',
+          location: 'Near Bath',
+          notes: 'Wild fermented from fresh-pressed Somerset apples. Still and cloudy with a hit of fresh apple, a classic bittersweet backbone and a dry finish.'
+        },
+        {
+          name: 'Medium',
+          style: 'Medium',
+          brewery: "Heck's × The Cider Box",
+          abv: '6.5% ABV',
+          logo: 'assets/logos/hecks-cider.png',
+          alt: "Heck's Cider",
+          url: 'https://www.theciderbox.com/',
+          location: 'Street, Somerset',
+          notes: 'A traditional vintage cider produced from locally grown Somerset cider apples. Selected by <a href="https://www.theciderbox.com/" target="_blank" rel="noopener">The Cider Box</a>, Bristol\'s finest cider bar.'
+        }
+      ];
+
+      const BEERS = [
+        { name: 'Blonde', style: 'Blonde', brewery: 'Little Martha Brewing Co', location: 'Bristol', abv: '3.8% ABV', logo: 'assets/logos/little-martha.png', alt: 'Little Martha', url: 'https://littlemarthabrewing.co.uk/', notes: 'A super refreshing summer cask blonde with lovely subtle tropical flavours balanced with pale malt. Brewed with Cascade and Olicana hops — easy-drinking and made to slip down nicely.' },
+        { name: 'Old Coach Road', style: 'Amber', brewery: 'Cross Brewing Co', location: 'Somerset', abv: '3.9% ABV', logo: 'assets/logos/cross.png', alt: 'Cross Brewing Co', url: 'https://whitehartinncross.co.uk/', notes: 'A traditional amber ale with a biscuit malt backbone and earthy English hops. Exactly what a Somerset village bitter should be.' },
+        { name: 'Hops and Glory', style: 'Trad English Pale Ale', brewery: 'Butcombe Brewing Co', location: 'Somerset', abv: '4.2% ABV', logo: 'assets/logos/butcombe.png', alt: 'Butcombe', url: 'https://www.butcombe.com/beers/hops-and-glory/', notes: 'A modern Real English Pale Ale brewed with six British hop varieties including First Gold and Olicana. A bright pale gold ale bursting with vibrant citrus and tropical fruit aromas, with notes of juicy grapefruit and fresh orange peel.' },
+        { name: 'Code Red', style: 'Red IPA', brewery: 'Twisted Oak Brewery', location: 'Somerset', abv: '4.3% ABV', logo: 'assets/logos/twisted-oak.png', alt: 'Twisted Oak Brewery', url: 'https://www.twistedoakbrewery.co.uk/our-beers/', notes: 'An addictive ruby red IPA brewed with UK Jester hops, giving a punchy aroma of tropical fruits. Brewed with Chinook, Cascade and Jester hops for a bold hit of colour and character.' },
+        { name: 'Alpha Centauri', style: 'Galaxy IPA', brewery: 'Hop Union Brewery', location: 'Bristol', abv: '4.36% ABV', logo: 'assets/logos/hop-union.png', alt: 'Hop Union Brewery', url: 'https://www.hopunionbrewery.co.uk/beers', notes: 'A Galaxy IPA with a cosmic blend of new world hops. Citra and Sabro bring citrus and creamy tropical notes; dry hopping with Galaxy, Krush, Sabro and Citra gives bright passion fruit, pineapple, and stone fruit flavours with a smooth, juicy finish.' },
+        { name: 'One More Mile', style: 'Amber', brewery: 'Good Chemistry Brewing', location: 'Bristol', abv: '4.5% ABV', logo: 'assets/logos/good-chemistry.png', alt: 'Good Chemistry', url: 'https://goodchemistrybrewing.co.uk/', notes: 'A beautifully balanced best bitter with rich biscuity malt, dried citrus and raisin notes, rounded out by a smooth, gently bitter finish.' },
+        { name: 'Independence', style: 'Premium Pale', brewery: 'Bristol Beer Factory', location: 'Bristol', abv: '4.6% ABV', logo: 'assets/logos/bristol-beer-factory.png', alt: 'Bristol Beer Factory', url: 'https://www.bristolbeerfactory.co.uk/products/independence-cask', notes: 'A distinctive American pale ale full of big hop character but without the strong bitterness. American hops added throughout the boil and in conditioning give a fresh aromatic boost. CAMRA\'s Champion Beer of Britain 2026.' },
+        { name: 'Karma Citra', style: 'Pale', brewery: 'Tangent Brewing', location: 'Bristol', abv: '5.0% ABV', logo: 'assets/logos/tangent.png', alt: 'Tangent Brewing', url: 'https://tangentbrewing.co.uk/product/karma-citra/', notes: 'A Citra Pale Ale all about balance and flavour. With its pale golden hue and gentle citrus notes, each sip offers a refreshing and mildly bitter experience. Harmony in every drop.' },
+        { name: "Goat's Leap", style: 'Copper', brewery: 'Cheddar Ales', location: 'Cheddar', abv: '5.5% ABV', logo: 'assets/logos/cheddar-ales.png', alt: 'Cheddar Ales', url: 'https://www.cheddarales.co.uk/goats-leap-india-pale-ale/a/37/', notes: 'Full-bodied and powerful, with a strikingly bitter finish. Traditional English hops — Goldings, Challenger and Fuggles — give a big malty hit that trails off into a bittersweet floral finish. Named after a legendary fishing spot in the Mekedatu Gorge, India.' }
+      ];
+
+      function buildGrid(items, gridId) {
+        var grid = document.getElementById(gridId);
+        if (!grid) return;
+        items.forEach(function(c) {
+          var item = document.createElement('div');
+          item.className = 'd7-item';
+          item.innerHTML =
+            '<a class="beverage-card" href="' + c.url + '" target="_blank" rel="noopener"><img src="' + c.logo + '" alt="' + c.alt + '"></a>' +
+            '<p class="dc-brewery">' + c.brewery + ' &middot; ' + c.location + '</p>' +
+            '<h3 class="dc-name">' + c.name + '</h3>' +
+            '<div class="dc-meta">' + (c.style ? '<span class="dc-style-chip--solid">' + c.style + '</span>' : '') + '<span class="dc-abv">' + c.abv + '</span></div>' +
+            '<hr class="dc-rule">' +
+            '<p class="dc-notes">' + c.notes + '</p>';
+          grid.appendChild(item);
+        });
+      }
+      buildGrid(CIDERS, 'd7-ciders');
+      buildGrid(BEERS,  'd7-beers');
+    })();
+  </script>
 
   <!-- ============================================================
        LIVE MUSIC
@@ -181,7 +230,10 @@
         <div class="artist__content">
           <div class="artist__header">
             <span class="artist__tag">Headline Act</span>
-            <h3 class="artist__name">Total Clusterfunk</h3>
+            <div class="artist__name-group">
+              <h3 class="artist__name">Total Clusterfunk</h3>
+              <span class="artist__time">21:15 – 22:45</span>
+            </div>
           </div>
           <p class="artist__bio">A Bristol soul-funk 8-piece with a stellar show. Comprising former members of Roni Size and Reprazent, The Federation and Massive Attack, they bring pure energy to the stage — mixing brass-heavy funk classics, smooth soul gems and tight original tunes that are sure to get you moving.</p>
           <blockquote class="artist__quote">
@@ -200,7 +252,10 @@
             <img src="assets/steve-payne.jpg" alt="Steve Payne performing live" loading="lazy">
           </div>
           <div class="artist__content">
-            <h3 class="artist__name">SP3 Blues Trio</h3>
+            <div class="artist__name-group">
+              <h3 class="artist__name">SP3 Blues Trio</h3>
+              <span class="artist__time">19:45 – 20:30</span>
+            </div>
             <p class="artist__bio">Legendary Bristol bluesman Steve Payne and guitarist Lyndon Webb, together with Yardbirds and Nine Below Zero harp man Billyboy Miskimmin — world class blues and boogie from three of the UK's finest exponents.</p>
             <a href="https://spthree.co.uk" class="btn btn--outline" target="_blank" rel="noopener">Visit their website</a>
           </div>
@@ -211,7 +266,10 @@
             <img src="assets/the-shrinks.jpg" alt="The Shrinks" loading="lazy">
           </div>
           <div class="artist__content">
-            <h3 class="artist__name">The Shrinks</h3>
+            <div class="artist__name-group">
+              <h3 class="artist__name">The Shrinks</h3>
+              <span class="artist__time">18:30 – 19:15</span>
+            </div>
             <p class="artist__bio">England's premier exponents of 'Avonicana' — where the mighty Mississippi meets the muddy Avon. More Cotham than Country, The Shrinks offer an off-kilter cocktail of original songs and Americana covers played with vim.</p>
             <a href="https://x.com/Moredamnedlies" class="btn btn--outline" target="_blank" rel="noopener">Follow on X</a>
           </div>
@@ -222,7 +280,10 @@
             <img src="assets/hester-miller.jpeg" alt="Hester Miller performing with her ukulele" loading="lazy">
           </div>
           <div class="artist__content">
-            <h3 class="artist__name">Hester Miller</h3>
+            <div class="artist__name-group">
+              <h3 class="artist__name">Hester Miller</h3>
+              <span class="artist__time">17:00 – 17:45</span>
+            </div>
             <p class="artist__bio">A regular at open mic nights around Bristol, the Malago-go Music Club and Victoria Park Festival. Hester brings a fabulous voice, wonderful ukulele playing and a warmth that fills any room.</p>
           </div>
         </article>
