@@ -139,6 +139,12 @@ ul { list-style: none; }
 
 .nav__cta:hover { background: var(--amber-dark); }
 
+.nav__cta--facebook {
+  background: var(--amber);
+  color: var(--black);
+}
+.nav__cta--facebook:hover { background: var(--amber-dark); }
+
 /* Hamburger */
 .nav__toggle {
   display: flex;
@@ -281,9 +287,8 @@ ul { list-style: none; }
 }
 
 .hero__stat-icon {
-  width: 36px;
-  height: 36px;
-  padding: 4px 0;
+  width: auto;
+  height: 44px;
   color: var(--amber);
 }
 
@@ -330,16 +335,28 @@ ul { list-style: none; }
 
 /* ============================================================
    SOLD-OUT TOGGLE
-   Add class="is-sold-out" to <body> to switch to post office mode
+   <body>                        — online tickets available
+   <body class="is-sold-out">   — online sold out, post office available
+   <body class="is-sold-out-completely"> — all tickets gone
 ============================================================ */
 
-/* Default: show online CTA, hide post office callout */
+/* Default: show online CTA only */
 .hero .hero__cta-soldout { display: none; }
+.hero .hero__cta-soldout-completely { display: none; }
+.nav__cta--facebook { display: none; }
 
-/* Sold out: hide online CTA, show post office callout */
+/* Online sold out: show post office callout + Facebook nav button */
 .is-sold-out .hero__cta-online { display: none; }
 .is-sold-out .hero .hero__cta-soldout { display: flex; }
-.is-sold-out .nav__cta { display: none; }
+.is-sold-out .nav__cta--tickets { display: none; }
+.is-sold-out .nav__cta--facebook { display: block; }
+
+/* Completely sold out: show fully-sold-out callout + Facebook nav button */
+.is-sold-out-completely .hero__cta-online { display: none; }
+.is-sold-out-completely .hero .hero__cta-soldout { display: none; }
+.is-sold-out-completely .hero .hero__cta-soldout-completely { display: flex; }
+.is-sold-out-completely .nav__cta--tickets { display: none; }
+.is-sold-out-completely .nav__cta--facebook { display: block; }
 
 .d7-grid {
   display: grid;
@@ -352,6 +369,7 @@ ul { list-style: none; }
 
 /* Card metadata */
 .dc-brewery { font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber-dark); margin-bottom: 0.3rem; }
+.dc-brewery a { color: inherit; text-decoration: underline; text-underline-offset: 0.2em; }
 .dc-name { font-family: var(--font-display); font-weight: 600; font-size: 1.35rem; line-height: 1.15; color: var(--on-cream); margin-bottom: 0.5rem; }
 .dc-meta { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; }
 .dc-style-chip { font-family: var(--font-body); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em; color: var(--amber-dark); }
@@ -402,6 +420,54 @@ ul { list-style: none; }
   color: var(--on-black-muted);
   letter-spacing: 0.01em;
 }
+
+/* Completely sold out callout */
+.hero__soldout-callout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(236, 164, 49, 0.85);
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.hero__soldout-heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.01em;
+  color: var(--amber);
+}
+
+.hero__soldout-body {
+  font-size: 0.9rem;
+  color: var(--on-black);
+  line-height: 1.55;
+  max-width: 32ch;
+}
+
+.hero__soldout-nudge {
+  font-size: 0.75rem;
+  color: var(--on-black-muted);
+  letter-spacing: 0.01em;
+  margin-top: 0.75rem;
+}
+
+.btn--facebook {
+  display: inline-block;
+  background: #1877F2;
+  color: #fff;
+  padding: 0.55em 1.25em;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+.btn--facebook:hover { background: #0f65d3; }
 
 @media (min-width: 480px) {
   .hero__crest { width: 260px; margin-bottom: -115px; }

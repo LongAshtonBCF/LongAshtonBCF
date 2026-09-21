@@ -23,9 +23,12 @@
     gtag('config', 'G-SJZX6BD2B6');
   </script>
 </head>
-<body class="is-sold-out">
-<!-- TICKET STATE: to switch to sold-out mode, change the line above to: <body class="is-sold-out"> -->
-<!-- TICKET STATE: to switch back to online tickets available, change the line above to: <body> -->
+<body class="is-sold-out-completely">
+<!-- TICKET STATE:
+  Online tickets available:       <body>
+  Online sold out, PO available:  <body class="is-sold-out">
+  Completely sold out:            <body class="is-sold-out-completely">
+-->
 
   <!-- ============================================================
        NAV
@@ -43,7 +46,8 @@
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://lacc.info/events/31/details" class="nav__cta" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'navigation'})">Get Tickets</a>
+      <a href="https://lacc.info/events/31/details" class="nav__cta nav__cta--tickets" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'navigation'})">Get Tickets</a>
+      <a href="https://www.facebook.com/LongAshtonBCF" class="nav__cta nav__cta--facebook" target="_blank" rel="noopener" onclick="gtag('event','facebook_follow',{location:'navigation'})">Follow on Facebook</a>
     </div>
   </nav>
 
@@ -81,12 +85,19 @@
           <!-- Shown when online tickets available -->
           <a href="https://lacc.info/events/31/details" class="btn btn--primary hero__cta-online" target="_blank" rel="noopener" onclick="gtag('event','buy_tickets',{location:'hero'})">Get Tickets &middot; &pound;15</a>
           <p class="hero__scarcity hero__cta-online">Limited online tickets &ndash; don't miss out</p>
-          <!-- Shown when online tickets sold out -->
+          <!-- Shown when online tickets sold out, post office available -->
           <div class="hero__postoffice-callout hero__cta-soldout">
             <p class="hero__postoffice-heading">Tickets &middot; &pound;15 &middot; Cash only</p>
             <p class="hero__postoffice-where">Available from <strong>Long Ashton Post Office</strong></p>
             <!--p class="hero__postoffice-when">From 1 September &bull; While stocks last</p-->
             <p class="hero__postoffice-when">While stocks last</p>
+          </div>
+          <!-- Shown when completely sold out -->
+          <div class="hero__soldout-callout hero__cta-soldout-completely">
+            <p class="hero__soldout-heading">Sold out. See you next year.</p>
+            <p class="hero__soldout-body">Online and Post Office tickets have both sold out. A handful <em>may</em> be available on the door, but we can't promise.</p>
+            <a href="https://www.facebook.com/LongAshtonBCF" class="btn btn--primary" target="_blank" rel="noopener" onclick="gtag('event','facebook_follow',{location:'hero'})">Follow us on Facebook</a>
+            <p class="hero__scarcity">Be first in line for 2027.</p>
           </div>
         </div>
         <p class="hero__small hero__cta-online">Includes your first drink, commemorative glass &amp; programme. Also available from <strong>Long Ashton Post Office</strong> from 1 September (cash only).</p>
@@ -171,19 +182,19 @@
         {
           name: 'Medium',
           style: 'Medium',
-          brewery: "Heck's × The Cider Box",
+          brewery: "Heck's × <a href='https://www.theciderbox.com/' target='_blank' rel='noopener'>The Cider Box</a>",
           abv: '6.5% ABV',
           logo: 'assets/logos/hecks-cider.png',
           alt: "Heck's Cider",
-          url: 'https://www.theciderbox.com/',
+          url: 'https://www.heckscider.com/',
           location: 'Street, Somerset',
-          notes: 'A traditional vintage cider produced from locally grown Somerset cider apples. Selected by <a href="https://www.theciderbox.com/" target="_blank" rel="noopener">The Cider Box</a>, Bristol\'s finest cider bar.'
+          notes: 'A traditional vintage cider produced from locally grown Somerset cider apples.'
         }
       ];
 
       const BEERS = [
         { name: 'Blonde', style: 'Blonde', brewery: 'Little Martha Brewing Co', location: 'Bristol', abv: '3.8% ABV', logo: 'assets/logos/little-martha.png', alt: 'Little Martha', url: 'https://littlemarthabrewing.co.uk/', notes: 'A super refreshing summer cask blonde with lovely subtle tropical flavours balanced with pale malt. Brewed with Cascade and Olicana hops — easy-drinking and made to slip down nicely.' },
-        { name: 'Old Coach Road', style: 'Amber', brewery: 'Cross Brewing Co', location: 'Somerset', abv: '3.9% ABV', logo: 'assets/logos/cross.png', alt: 'Cross Brewing Co', url: 'https://whitehartinncross.co.uk/', notes: 'A traditional amber ale with a biscuit malt backbone and earthy English hops. Exactly what a Somerset village bitter should be.' },
+        { name: 'Old Coach Road', style: 'Best Bitter', brewery: 'Cross Brewing Co', location: 'Somerset', abv: '3.9% ABV', logo: 'assets/logos/cross.png', alt: 'Cross Brewing Co', url: 'https://whitehartinncross.co.uk/', notes: 'Classic light and malty, easy drinking best bitter' },
         { name: 'Hops and Glory', style: 'Trad English Pale Ale', brewery: 'Butcombe Brewing Co', location: 'Somerset', abv: '4.2% ABV', logo: 'assets/logos/butcombe.png', alt: 'Butcombe', url: 'https://www.butcombe.com/beers/hops-and-glory/', notes: 'A modern Real English Pale Ale brewed with six British hop varieties including First Gold and Olicana. A bright pale gold ale bursting with vibrant citrus and tropical fruit aromas, with notes of juicy grapefruit and fresh orange peel.' },
         { name: 'Code Red', style: 'Red IPA', brewery: 'Twisted Oak Brewery', location: 'Somerset', abv: '4.3% ABV', logo: 'assets/logos/twisted-oak.png', alt: 'Twisted Oak Brewery', url: 'https://www.twistedoakbrewery.co.uk/our-beers/', notes: 'An addictive ruby red IPA brewed with UK Jester hops, giving a punchy aroma of tropical fruits. Brewed with Chinook, Cascade and Jester hops for a bold hit of colour and character.' },
         { name: 'Alpha Centauri', style: 'Galaxy IPA', brewery: 'Hop Union Brewery', location: 'Bristol', abv: '4.36% ABV', logo: 'assets/logos/hop-union.png', alt: 'Hop Union Brewery', url: 'https://www.hopunionbrewery.co.uk/beers', notes: 'A Galaxy IPA with a cosmic blend of new world hops. Citra and Sabro bring citrus and creamy tropical notes; dry hopping with Galaxy, Krush, Sabro and Citra gives bright passion fruit, pineapple, and stone fruit flavours with a smooth, juicy finish.' },
@@ -370,8 +381,6 @@
         <a href="https://longashtonpostoffice.co.uk" target="_blank" rel="noopener" role="listitem">Long Ashton Village Shop &amp; PO</a>
         <span class="sponsors-dot" aria-hidden="true">&bull;</span>
         <a href="https://portobristol.co.uk/" target="_blank" rel="noopener" role="listitem">Port O' Bristol</a>
-        <span class="sponsors-dot" aria-hidden="true">&bull;</span>
-        <a href="https://theangelinn-longashton.co.uk" target="_blank" rel="noopener" role="listitem">The Angel Inn</a>
         <span class="sponsors-dot" aria-hidden="true">&bull;</span>
         <a href="https://thebirdinla.co.uk" target="_blank" rel="noopener" role="listitem">The Bird in Hand</a>
         <span class="sponsors-dot" aria-hidden="true">&bull;</span>
